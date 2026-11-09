@@ -1,0 +1,30 @@
+HANDOFF
+turns: 14
+learns by: combination of definitions, intuition, mathematical derivations, and practical Python examples; prefers short sessions and step-by-step code explanations
+
+domain: point processes | level: 2 | milestone: 2 reached | anchor: marginal intensity
+marginal intensity | claim: no | prior: none | end: introduced | "no quote"
+other deployed: distinguishing predicted emergence locations from event counts
+other open: emission function, intensity surface, Poisson thinning, two-dimensional point-process likelihood, intensity normalization
+
+domain: statistical inference | level: 3 | milestone: 2 reached | anchor: identifiability
+ablation | claim: no | prior: none | end: introduced | "no quote"
+generalization | claim: yes | prior: none | end: introduced | "no quote"
+overfitting | claim: yes | prior: none | end: introduced | "no quote"
+model selection | claim: yes | prior: none | end: introduced | "no quote"
+other deployed: reasoning about isolated parameter changes, training-data separation, held-out score comparison, uncertainty in score differences, optimization, SVD covariance calculation, numerical sensitivity, model comparison, amplitude fitting
+other open: identifiability, paired standard error, parameterization, latent variable, gauge freedom, partial pooling, leave-one-cycle-out cross-validation, held-out log-likelihood, quadrature mesh, predictive validation versus fitted performance
+
+domain: solar cycle physics | level: 3 | milestone: 2 reached | anchor: drift track
+hemispheric asymmetry | claim: yes | prior: none | end: introduced | "no quote"
+other deployed: differential rotation, magnetic-field amplitude, emergence latitude, relationship between magnetic-field strength and emergence intensity, reasoning about equatorward drift and emergence locations
+other open: drift track, buoyancy threshold, belt width, drift-curvature parameter, distinguishing drift timescale from drift curvature, fixed buoyancy threshold, interpreting belt-width scaling
+
+proposed Week 04 knob: time-dependent magnetic belt drift curvature
+equation: mu(s) = 15 deg * exp[-s/tau - beta*log(cosh(s/tau))]
+baseline: beta = 0 restores the original exponential drift exactly
+question: Does evolving fractional drift rate improve prediction of emergence latitudes?
+expected sign: either positive or negative beta is plausible; no directional preference
+expected effect: most directly changes emergence latitudes, with possible indirect effect on event counts
+implementation status: proposed, not implemented or scored
+next check: verify identifiability and compatibility with independent per-hemicycle fitting
